@@ -3,7 +3,7 @@
 set -eu
 
 BOOTSTRAP_REPOSITORY_URL='https:'\
-'//github.com/f5vmr/Svxlink-Bootstrap.git'
+'//github.com/f5vmr/Svxlink-Tetra-Bootstrap.git'
 BOOTSTRAP_BRANCH='main'
 BOOTSTRAP_TEMPORARY_DIRECTORY=''
 
