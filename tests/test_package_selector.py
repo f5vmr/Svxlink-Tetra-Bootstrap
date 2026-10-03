@@ -29,53 +29,12 @@ class PackageSelectorTests(unittest.TestCase):
         cases = [
             (
                 "raspberry_pi",
-                "debian",
-                "bookworm",
-                "arm64",
-                "raspberry_pi_bookworm_arm64",
-            ),
-            (
-                "raspberry_pi",
-                "debian",
+                os_id,
                 "trixie",
                 "arm64",
                 "raspberry_pi_trixie_arm64",
-            ),
-            (
-                "raspberry_pi",
-                "raspbian",
-                "bookworm",
-                "armhf",
-                "raspberry_pi_bookworm_armhf",
-            ),
-            (
-                "nanopi_neo",
-                "debian",
-                "trixie",
-                "armhf",
-                "nanopi_neo_trixie_armhf",
-            ),
-            (
-                "debian",
-                "debian",
-                "bookworm",
-                "amd64",
-                "debian_bookworm_amd64",
-            ),
-            (
-                "debian",
-                "debian",
-                "trixie",
-                "amd64",
-                "debian_trixie_amd64",
-            ),
-            (
-                "debian",
-                "debian",
-                "bookworm",
-                "i386",
-                "debian_bookworm_i386",
-            ),
+            )
+            for os_id in ("debian", "raspbian")
         ]
 
         for (
@@ -124,6 +83,12 @@ class PackageSelectorTests(unittest.TestCase):
                 "trixie",
                 "armhf",
             ),
+            ("raspberry_pi", "debian", "bookworm", "arm64"),
+            ("raspberry_pi", "raspbian", "bookworm", "armhf"),
+            ("nanopi_neo", "debian", "trixie", "armhf"),
+            ("debian", "debian", "bookworm", "amd64"),
+            ("debian", "debian", "trixie", "amd64"),
+            ("debian", "debian", "bookworm", "i386"),
         ]
 
         for host in cases:
@@ -172,7 +137,7 @@ class PackageSelectorTests(unittest.TestCase):
                 manifest,
                 "raspberry_pi",
                 "debian",
-                "bookworm",
+                "trixie",
                 "arm64",
             )
 

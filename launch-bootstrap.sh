@@ -33,7 +33,7 @@ BOOTSTRAP_OS_RELEASE_FILE="${SVXLINK_BOOTSTRAP_OS_RELEASE_FILE:-/etc/os-release}
 
 if [ ! -r "${BOOTSTRAP_OS_RELEASE_FILE}" ]; then
     echo "Cannot read ${BOOTSTRAP_OS_RELEASE_FILE}." >&2
-    echo "SvxLink Bootstrap requires a supported Bookworm or Trixie system." >&2
+    echo "SvxLink TETRA requires Raspberry Pi Trixie arm64." >&2
     exit 1
 fi
 
@@ -56,22 +56,34 @@ case "${BOOTSTRAP_OS_ID}" in
         ;;
     *)
         echo "Unsupported operating system: ${BOOTSTRAP_PRETTY_NAME}" >&2
-        echo "SvxLink Bootstrap supports Debian, Raspberry Pi OS and" >&2
-        echo "compatible Armbian systems based on Bookworm or Trixie." >&2
-        echo "See: https://github.com/f5vmr/Svxlink-Bootstrap#readme" >&2
+        echo "SvxLink TETRA requires Raspberry Pi OS or Debian Trixie." >&2
         exit 1
         ;;
 esac
 
-case "${BOOTSTRAP_CODENAME}" in
-    bookworm|trixie)
+if [ "${BOOTSTRAP_CODENAME}" != "trixie" ]; then
+    echo "Unsupported operating-system release: ${BOOTSTRAP_PRETTY_NAME}" >&2
+    echo "SvxLink TETRA requires Trixie." >&2
+    exit 1
+fi
+
+BOOTSTRAP_ARCHITECTURE="$(dpkg --print-architecture)"
+
+if [ "${BOOTSTRAP_ARCHITECTURE}" != "arm64" ]; then
+    echo "Unsupported architecture: ${BOOTSTRAP_ARCHITECTURE}" >&2
+    echo "SvxLink TETRA requires a 64-bit arm64 installation." >&2
+    exit 1
+fi
+
+BOOTSTRAP_DEVICE_MODEL="$(
+    tr -d '\000' < /proc/device-tree/model 2>/dev/null || true
+)"
+
+case "${BOOTSTRAP_DEVICE_MODEL}" in
+    *"Raspberry Pi"*)
         ;;
     *)
-        echo "Unsupported operating-system release: ${BOOTSTRAP_PRETTY_NAME}" >&2
-        echo "Detected codename: ${BOOTSTRAP_CODENAME:-not reported}" >&2
-        echo "Install a supported Bookworm or Trixie system before" >&2
-        echo "running SvxLink Bootstrap." >&2
-        echo "See: https://github.com/f5vmr/Svxlink-Bootstrap#readme" >&2
+        echo "SvxLink TETRA requires Raspberry Pi hardware." >&2
         exit 1
         ;;
 esac

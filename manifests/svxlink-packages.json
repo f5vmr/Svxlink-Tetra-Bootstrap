@@ -1,22 +1,7 @@
 {
   "schema_version": 1,
-  "svxlink_version": "26.05.1",
+  "svxlink_version": "26.05.1+tetra-1",
   "packages": [
-    {
-      "id": "raspberry_pi_bookworm_arm64",
-      "platform": "raspberry_pi",
-      "os_ids": [
-        "debian",
-        "raspbian"
-      ],
-      "codename": "bookworm",
-      "architecture": "arm64",
-      "tag": "26.05.01_arm64_bookworm",
-      "asset": "svxlink_26.05.1_arm64.deb",
-      "size": 5194310,
-      "sha256": "f4781c9127098ececfcf1998f41364ed4afae47eb55531eb7d599e9056ce4193",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/26.05.01_arm64_bookworm/svxlink_26.05.1_arm64.deb"
-    },
     {
       "id": "raspberry_pi_trixie_arm64",
       "platform": "raspberry_pi",
@@ -26,82 +11,11 @@
       ],
       "codename": "trixie",
       "architecture": "arm64",
-      "tag": "V26.05.1_arm64_Trixie",
-      "asset": "svxlink_26.05.1_arm64.deb",
-      "size": 5238744,
-      "sha256": "c56a28808a0b12485107e36f39f7005be7622fb1b613e333b228bcc645393d9e",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/V26.05.1_arm64_Trixie/svxlink_26.05.1_arm64.deb"
-    },
-    {
-      "id": "raspberry_pi_bookworm_armhf",
-      "platform": "raspberry_pi",
-      "os_ids": [
-        "debian",
-        "raspbian"
-      ],
-      "codename": "bookworm",
-      "architecture": "armhf",
-      "tag": "Svxlink_V26.05.1_armhf",
-      "asset": "svxlink_26.05.1_armhf.deb",
-      "size": 4839892,
-      "sha256": "df8470d24f66dcd80042e2fe9c523a0faf93306ebe3591fc651ca267843e8d79",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/Svxlink_V26.05.1_armhf/svxlink_26.05.1_armhf.deb"
-    },
-    {
-      "id": "debian_bookworm_amd64",
-      "platform": "debian",
-      "os_ids": [
-        "debian"
-      ],
-      "codename": "bookworm",
-      "architecture": "amd64",
-      "tag": "V26.05.1_amd64_bookworm",
-      "asset": "svxlink_26.05.1_amd64.deb",
-      "size": 5645006,
-      "sha256": "21449d4bdda7a56868c5e24f6bb4e35779c3778d615a983475ceee19597e3382",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/V26.05.1_amd64_bookworm/svxlink_26.05.1_amd64.deb"
-    },
-    {
-      "id": "debian_trixie_amd64",
-      "platform": "debian",
-      "os_ids": [
-        "debian"
-      ],
-      "codename": "trixie",
-      "architecture": "amd64",
-      "tag": "V26.05.1_amd64_trixie",
-      "asset": "svxlink_26.05.1_amd64.deb",
-      "size": 5462638,
-      "sha256": "1f845429f1f447162e1260354ff435b0ec2086c976794abdd89868a81483c567",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/V26.05.1_amd64_trixie/svxlink_26.05.1_amd64.deb"
-    },
-    {
-      "id": "debian_bookworm_i386",
-      "platform": "debian",
-      "os_ids": [
-        "debian"
-      ],
-      "codename": "bookworm",
-      "architecture": "i386",
-      "tag": "V26.05.1_i386_bookworm",
-      "asset": "svxlink_26.05.1_i386.deb",
-      "size": 5543444,
-      "sha256": "dd5faaf160f1866e47796f05f635c03c49615add136cc31ef86498d1663dee6d",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/V26.05.1_i386_bookworm/svxlink_26.05.1_i386.deb"
-    },
-    {
-      "id": "nanopi_neo_trixie_armhf",
-      "platform": "nanopi_neo",
-      "os_ids": [
-        "debian"
-      ],
-      "codename": "trixie",
-      "architecture": "armhf",
-      "tag": "V26.05.1_armhf_armbian.deb",
-      "asset": "svxlink_26.05.1_armhf.deb",
-      "size": 4866586,
-      "sha256": "27da9b83ea9678c6a08b4fe43aef6f19ed31cd8b18520fea9c282bc67b74106f",
-      "url": "https://github.com/f5vmr/svxlink/releases/download/V26.05.1_armhf_armbian.deb/svxlink_26.05.1_armhf.deb"
+      "tag": "V26.05.1+tetra",
+      "asset": "svxlink_26.05.1+tetra-1_arm64.deb",
+      "size": 5515286,
+      "sha256": "6b8c9e4598efa9fd7a2c2910613ea76bb67ab45229fb743cfe0f5605803cd422",
+      "url": "https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/download/V26.05.1%2Btetra/svxlink_26.05.1+tetra-1_arm64.deb"
     }
   ]
 }

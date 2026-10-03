@@ -94,7 +94,7 @@ class LauncherTests(unittest.TestCase):
             result.stderr,
         )
         self.assertIn("bullseye", result.stderr)
-        self.assertIn("Bookworm or Trixie", result.stderr)
+        self.assertIn("SvxLink TETRA requires Trixie", result.stderr)
         self.assertFalse(apt_was_called)
 
     def test_buster_is_rejected_before_apt(self):

@@ -38,7 +38,8 @@ def validate_package_metadata(package):
         )
 
     if not url.startswith(
-        "https://github.com/f5vmr/svxlink/releases/"
+        "https://github.com/f5vmr/"
+        "Svxlink-Tetra-Bootstrap/releases/download/"
     ):
         raise PackageDownloadError(
             "Package download URL is not trusted."

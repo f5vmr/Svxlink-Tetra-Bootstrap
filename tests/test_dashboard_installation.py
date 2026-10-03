@@ -7,6 +7,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from dashboard_installation import (
+    DASHBOARD_CHECKOUT_NAME,
     DASHBOARD_INSTALL_DIRECTORY,
     DASHBOARD_REPOSITORY,
     DashboardInstallationError,
@@ -25,7 +26,7 @@ class DashboardInstallationTests(unittest.TestCase):
         )
         self.checkout = (
             self.work_directory
-            / "SvxLink-Dash-V4.0"
+            / DASHBOARD_CHECKOUT_NAME
         )
         self.installer = (
             self.checkout

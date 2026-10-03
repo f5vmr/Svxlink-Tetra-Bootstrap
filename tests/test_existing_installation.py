@@ -460,7 +460,7 @@ class ExistingInstallationTests(unittest.TestCase):
             )
 
         self.assertTrue(result["present"])
-        self.assertTrue(
+        self.assertFalse(
             result["supported_version"]
         )
         self.assertEqual(

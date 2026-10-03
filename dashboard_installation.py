@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Obtain and run the SvxLink-Dash V4.0 installation script.
+Obtain and run the SvxLink-Tetra-Dash installation script.
 """
 
 import os
@@ -16,12 +16,12 @@ from system_access import require_root
 
 DASHBOARD_REPOSITORY = (
     "https://github.com/f5vmr/"
-    "SvxLink-Dash-V4.0.git"
+    "SvxLink-Tetra-Dash.git"
 )
 
 DASHBOARD_BRANCH = "main"
 
-DASHBOARD_CHECKOUT_NAME = "SvxLink-Dash-V4.0"
+DASHBOARD_CHECKOUT_NAME = "SvxLink-Tetra-Dash"
 
 DASHBOARD_INSTALLER = Path(
     "install/install-dashboard.sh"
@@ -103,7 +103,7 @@ def install_dashboard(work_directory=None):
 
         if clone_status != 0:
             raise DashboardInstallationError(
-                "The SvxLink-Dash V4.0 repository could "
+                "The SvxLink-Tetra-Dash repository could "
                 f"not be cloned (exit status {clone_status})."
             )
 

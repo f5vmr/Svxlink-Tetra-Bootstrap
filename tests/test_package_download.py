@@ -21,7 +21,8 @@ class PackageDownloadTests(unittest.TestCase):
             "id": "test_package",
             "asset": "svxlink_test_amd64.deb",
             "url": (
-                "https://github.com/f5vmr/svxlink/"
+                "https://github.com/f5vmr/"
+                "Svxlink-Tetra-Bootstrap/"
                 "releases/download/test/"
                 "svxlink_test_amd64.deb"
             ),

@@ -11,7 +11,7 @@ import subprocess
 from pathlib import Path
 
 
-SUPPORTED_SVXLINK_VERSION = "26.05.1"
+SUPPORTED_SVXLINK_VERSION = "26.05.1+tetra-1"
 
 KNOWN_FAULTY_PACKAGE_VERSION = "1.10.1@V26.05_Trixie"
 
@@ -277,6 +277,18 @@ def package_status_is_installed(package_status):
     )
 
 
+def package_version_is_supported(package_status):
+    """Require the exact supported TETRA Debian package version."""
+
+    fields = str(package_status or "").split()
+
+    return (
+        package_status_is_installed(package_status)
+        and len(fields) == 3
+        and fields[2] == SUPPORTED_SVXLINK_VERSION
+    )
+
+
 def resolve_executable_path(executable):
     """Return the canonical executable path."""
 
@@ -441,6 +453,9 @@ def detect_existing_installation(
 
     evidence["supported_version"] = (
         evidence["present"]
+        and package_version_is_supported(
+            evidence["package_status"]
+        )
         and version_is_supported(
             evidence["version"]
         )
