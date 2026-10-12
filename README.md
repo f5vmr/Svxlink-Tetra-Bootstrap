@@ -35,8 +35,7 @@ The current manifest contains seven supported package targets:
 
 A system that does not exactly match this entry is rejected without downloading or installing an SvxLink package.
 
-The NanoPi Neo package is selected from the device-tree model, Debian Trixie identity and `armhf` package architecture. The fact that Armbian identifies itself as Debian in `/etc/os-release` does not cause it to receive a generic Debian PC package.
-
+This software is for a NEW INSTALL ONLY - Do not upgrade an existing SVXLINK-TETRA card
 
 ## Before running Bootstrap
 
@@ -164,7 +163,7 @@ The page explains whether Bootstrap will:
 * Convert a supported compiler installation.
 * Stop for manual review.
 
-Review this information before selecting **Install SvxLink-Dash V4.0**.
+Review this information before selecting **Install SvxLink-Tetra-Dash V4.1**.
 
 ## Host detection
 
@@ -177,7 +176,6 @@ Bootstrap obtains host information from standard system interfaces:
 Platform classification is applied in this order:
 
 1. A device model containing `Raspberry Pi` is classified as `raspberry_pi`.
-2. A device model containing both `NanoPi` and `Neo` is classified as `nanopi_neo`.
 3. A system whose operating-system ID is `debian` is classified as `debian`.
 4. Other values remain unsupported unless explicitly added to the manifest.
 
@@ -196,7 +194,7 @@ The package manifest records the expected:
 Bootstrap accepts package URLs only from:
 
 ```text
-https://github.com/f5vmr/svxlink/releases/
+https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/
 ```
 
 The selected package is initially downloaded to a file ending in `.part`.
