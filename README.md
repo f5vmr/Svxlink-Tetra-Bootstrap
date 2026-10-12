@@ -1,16 +1,16 @@
 # SvxLink-Bootstrap
 
-SvxLink-Bootstrap provides a safe, guided route from a supported Debian, Raspberry Pi OS or Armbian installation to a complete SvxLink 26.05.1 and SvxLink-Dash V4.0 system.
+SvxLink-Bootstrap provides a safe, guided route from a supported Debian, Raspberry Pi OS or Armbian installation to a complete SvxLink 26.05.2 and SvxLink-Dash V4.1 system.
 
 It detects the operating system, release, Debian architecture and hardware platform, selects one exact compatible SvxLink Debian package from a controlled manifest, verifies the downloaded package and installs SvxLink-Dash V4.0.
 
-The normal installation is performed through a temporary, token-protected web manager. After installation succeeds, the browser is handed directly to the permanent SvxLink-Dash V4.0 configuration workflow.
+The normal installation is performed through a temporary, token-protected web manager. After installation succeeds, the browser is handed directly to the permanent SvxLink-Dash V4.1 configuration workflow.
 
 ## Project relationship
 
-SvxLink 26.05.1 is created and maintained by Tobias Blomberg, SM0SVX.
+SvxLink 26.05.2 is created and maintained by Tobias Blomberg, SM0SVX.
 
-SvxLink-Bootstrap and SvxLink-Dash V4.0 are developed and maintained by Chris Jackson, G4NAB, to provide a guided installation, configuration and operational environment around the standard SvxLink software.
+SvxLink-Bootstrap and SvxLink-Dash V4.1 are developed and maintained by Chris Jackson, G4NAB, to provide a guided installation, configuration and operational environment around the standard SvxLink software.
 
 For authoritative SvxLink configuration and operating information, refer only to:
 
@@ -30,13 +30,8 @@ The current manifest contains seven supported package targets:
 
 | Platform     | Operating system          | Release  | Architecture |
 | ------------ | ------------------------- | -------- | ------------ |
-| Raspberry Pi | Raspberry Pi OS           | Bookworm | arm64        |
 | Raspberry Pi | Raspberry Pi OS.          | Trixie   | arm64        |
-| Raspberry Pi | Raspberry Pi OS.          | Bookworm | armhf        |
-| Debian PC    | Debian                    | Bookworm | amd64        |
-| Debian PC    | Debian                    | Trixie   | amd64        |
-| Debian PC    | Debian                    | Bookworm | i386         |
-| NanoPi Neo   | Armbian based on Debian   | Trixie   | armhf        |
+
 
 A system that does not exactly match one of these entries is rejected without downloading or installing an SvxLink package.
 
@@ -44,9 +39,9 @@ The NanoPi Neo package is selected from the device-tree model, Debian Trixie ide
 
 ## Older operating systems
 
-SvxLink-Bootstrap is intended to run only on the supported Bookworm and Trixie systems listed above.
+SvxLink-Tetra-Bootstrap is intended to run only on the supported Trixie system listed above.
 
-The launcher refuses to proceed on Debian or Raspberry Pi OS releases earlier than Bookworm and performs this check before refreshing apt or installing dependencies. Installing `python3` on an older system would supply only the Python version and supporting packages available to that historical distribution; these may not be capable of running the current Bootstrap or SvxLink-Dash V4.0 software.
+The launcher refuses to proceed on Debian or Raspberry Pi OS releases earlier than Bookworm and performs this check before refreshing apt or installing dependencies. Installing `python3` on an older system would supply only the Python version and supporting packages available to that historical distribution; these may not be capable of running the current Bootstrap or SvxLink-Tetra-Dash V4.1 software.
 
 Do not use Bootstrap as an in-place operating-system upgrade tool.
 
