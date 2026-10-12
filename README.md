@@ -2,7 +2,7 @@
 
 SvxLink-Bootstrap provides a safe, guided route from a supported Debian, Raspberry Pi OS or Armbian installation to a complete SvxLink 26.05.2 and SvxLink-Dash V4.1 system.
 
-It detects the operating system, release, Debian architecture and hardware platform, selects one exact compatible SvxLink Debian package from a controlled manifest, verifies the downloaded package and installs SvxLink-Dash V4.0.
+It detects the operating system, release, Debian architecture and hardware platform, selects one exact compatible SvxLink Debian package from a controlled manifest, verifies the downloaded package and installs SvxLink-Tetra-Dash V4.1.
 
 The normal installation is performed through a temporary, token-protected web manager. After installation succeeds, the browser is handed directly to the permanent SvxLink-Dash V4.1 configuration workflow.
 
@@ -33,35 +33,14 @@ The current manifest contains seven supported package targets:
 | Raspberry Pi | Raspberry Pi OS.          | Trixie   | arm64        |
 
 
-A system that does not exactly match one of these entries is rejected without downloading or installing an SvxLink package.
+A system that does not exactly match this entry is rejected without downloading or installing an SvxLink package.
 
 The NanoPi Neo package is selected from the device-tree model, Debian Trixie identity and `armhf` package architecture. The fact that Armbian identifies itself as Debian in `/etc/os-release` does not cause it to receive a generic Debian PC package.
-
-## Older operating systems
-
-SvxLink-Tetra-Bootstrap is intended to run only on the supported Trixie system listed above.
-
-The launcher refuses to proceed on Debian or Raspberry Pi OS releases earlier than Bookworm and performs this check before refreshing apt or installing dependencies. Installing `python3` on an older system would supply only the Python version and supporting packages available to that historical distribution; these may not be capable of running the current Bootstrap or SvxLink-Tetra-Dash V4.1 software.
-
-Do not use Bootstrap as an in-place operating-system upgrade tool.
-
-For a system based on Jessie, Stretch, Buster, Bullseye or any another unsupported release:
-
-1. Record the existing radio, audio, GPIO, squelch, transmitter, logic, module and reflector configuration.
-2. Make an independent copy of `/etc/svxlink`, `/etc/default/svxlink` and any locally maintained scripts or certificates.
-3. Install a currently supported operating system appropriate to the hardware.
-4. Update and reboot the new operating system.
-5. Run SvxLink-Bootstrap as a fresh installation.
-6. Recreate and validate the required configuration through SvxLink-Dash V4.0.
-
-Historical configuration should be retained for reference, but it should not be restored wholesale over the current installation. GPIO libraries, device naming, reflector protocols, talkgroup operation and configuration structure may differ substantially.
 
 
 ## Before running Bootstrap
 
 The operator is responsible for updating the operating system before starting SvxLink-Bootstrap. It will be prudent to use user 'pi' when writing the Operating System for Raspberry Pi. The Operating system for Armbian builds in root, but invites the input of a user name - pi is also recommended.
-
-For amd64 or i386 leave the user as root.
 
 Once installed on or an existing system, always run:
 
@@ -98,7 +77,7 @@ Run the launcher from the target system:
 
 ```bash
 curl -fsSL \
-https://raw.githubusercontent.com/f5vmr/Svxlink-Bootstrap/main/launch-bootstrap.sh |
+https://raw.githubusercontent.com/f5vmr/Svxlink-Tetra-Bootstrap/main/launch-bootstrap.sh |
 sudo sh
 ```
 
