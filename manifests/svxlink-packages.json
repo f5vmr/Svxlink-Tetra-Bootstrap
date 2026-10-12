@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "svxlink_version": "26.05.1+tetra-1",
+  "svxlink_version": "26.05.2+tetra-1",
   "packages": [
     {
       "id": "raspberry_pi_trixie_arm64",
@@ -11,11 +11,11 @@
       ],
       "codename": "trixie",
       "architecture": "arm64",
-      "tag": "V26.05.1+tetra",
-      "asset": "svxlink_26.05.1+tetra-1_arm64.deb",
-      "size": 5515286,
-      "sha256": "6b8c9e4598efa9fd7a2c2910613ea76bb67ab45229fb743cfe0f5605803cd422",
-      "url": "https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/download/V26.05.1%2Btetra/svxlink_26.05.1+tetra-1_arm64.deb"
+      "tag": "V26.05.2+tetra",
+      "asset": "svxlink_26.05.2+tetra-1_arm64.deb",
+      "size": 5540070,
+      "sha256": "998f80e9100db9a07bd3469c38ad8e4e54937c6e1b88ca31d8b4f6fdc1b12e82",
+      "url": "https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/download/V26.05.2%2Btetra/svxlink_26.05.2+tetra-1_arm64.deb"
     }
   ]
 }
