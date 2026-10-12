@@ -99,7 +99,7 @@ Operators who prefer to inspect the launcher first can use:
 
 ```bash
 curl -fsSL \
-https://raw.githubusercontent.com/f5vmr/Svxlink-Bootstrap/main/launch-bootstrap.sh \
+https://raw.githubusercontent.com/f5vmr/Svxlink-Tetra-Bootstrap/main/launch-bootstrap.sh \
 -o /tmp/launch-bootstrap.sh
 
 less /tmp/launch-bootstrap.sh
