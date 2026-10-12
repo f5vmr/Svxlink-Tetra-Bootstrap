@@ -11,11 +11,11 @@
       ],
       "codename": "trixie",
       "architecture": "arm64",
-      "tag": "V26.05.2+tetra",
+      "tag": "V26.05.2_tetra",
       "asset": "svxlink_26.05.2+tetra-1_arm64.deb",
       "size": 5540070,
       "sha256": "998f80e9100db9a07bd3469c38ad8e4e54937c6e1b88ca31d8b4f6fdc1b12e82",
-      "url": "https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/download/V26.05.2%2Btetra/svxlink_26.05.2+tetra-1_arm64.deb"
+      "url": "https://github.com/f5vmr/Svxlink-Tetra-Bootstrap/releases/download/V26.05.2_tetra/svxlink_26.05.2+tetra-1_arm64.deb"
     }
   ]
 }
