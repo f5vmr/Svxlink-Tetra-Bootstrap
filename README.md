@@ -37,6 +37,8 @@ A system that does not exactly match this entry is rejected without downloading 
 
 This software is for a NEW INSTALL ONLY - Do not upgrade an existing SVXLINK-TETRA card
 
+Special notice - ensure that pi ALL=(ALL:ALL) NOPASSWD: ALL is entered into the sudo visudo
+
 ## Before running Bootstrap
 
 The operator is responsible for updating the operating system before starting SvxLink-Bootstrap. It will be prudent to use user 'pi' when writing the Operating System for Raspberry Pi. The Operating system for Armbian builds in root, but invites the input of a user name - pi is also recommended.
