@@ -26,7 +26,7 @@ Package selection requires an exact match for:
 * Release codename.
 * Debian package architecture.
 
-The current manifest contains seven supported package targets:
+The current manifest contains one supported package target:
 
 | Platform     | Operating system          | Release  | Architecture |
 | ------------ | ------------------------- | -------- | ------------ |
